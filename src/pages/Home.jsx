@@ -12,7 +12,9 @@ export default function Home() {
       <div className="col-span-2">
         <TrendingWidget />
       </div>
-      {/* <Separator /> */}
+      {/* <div className="col-span-1">
+      <Separator />
+      </div> */}
       <div className="col-span-3">
         <MarketCapWidget />
       </div>

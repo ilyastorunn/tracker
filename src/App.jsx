@@ -5,6 +5,7 @@ import SignUp from "./pages/SignUp";
 import Coin from "./pages/Coin";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
+import News from "./pages/News";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="/coin" element={<Coin />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/notfound" element={<NotFound />} />
+        <Route path="/news" element={<News />} />
       </Routes>
     </BrowserRouter>
   );

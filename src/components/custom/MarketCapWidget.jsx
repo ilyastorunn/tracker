@@ -47,7 +47,7 @@ export default function MarketCapWidget() {
   ];
 
   return (
-    <Card className="w-full h-full min-h-[250px] bg-black text-white shadow p-6">
+    <Card className="w-full h-full min-h-[250px] bg-card text-text-primary shadow-lg p-6 rounded-lg">
       <CardHeader>
         <h2 className="text-lg font-semibold mb-4">Currencies by Market Cap</h2>
       </CardHeader>
@@ -62,7 +62,7 @@ export default function MarketCapWidget() {
                 <img className="w-4 h-4" src={item.logo} alt={item.name} />
                 <div className="flex flex-col">
                   <div className="text-sm font-medium">{item.name}</div>
-                  <div className="text-xs text-gray-400">{item.symbol}</div>
+                  <div className="text-xs text-text-secondary">{item.symbol}</div>
                 </div>
               </div>
               <div className="col-span-1 text-sm font-medium">{item.price}</div>

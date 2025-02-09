@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import example from "../assets/blackscreen.png";
 import HeaderWelcome from "../components/custom/HeaderWelcome";
 import Footer from "../components/custom/Footer";
+import { Link } from "react-router";
 
 export default function Welcome() {
   return (
@@ -12,12 +13,14 @@ export default function Welcome() {
           <h1 className="text-4xl font-bold mb-4">
             Track Your Currencies Easily.
           </h1>
-          <Button
-            variant="default"
-            className="px-6 py-3 bg-background text-text-primary rounded-full border border-[#5050FF] hover:border-[#7070FF] transition-all"
-          >
-            SIGN UP FOR FREE!
-          </Button>
+          <Link to="/signup">
+            <Button
+              variant="default"
+              className="px-6 py-3 bg-background text-text-primary rounded-full border border-[#5050FF] hover:border-[#7070FF] transition-all"
+            >
+              SIGN UP FOR FREE!
+            </Button>
+          </Link>
         </div>
         <div className="max-w-[1200px] w-full space-y-40">
           <section className="text-center">
@@ -72,12 +75,14 @@ export default function Welcome() {
               Make the right decision.
             </h2>
             <p className="text-text-secondary mb-5">Try it now</p>
+            <Link to="/signup">
             <Button
               variant="default"
               className="px-6 py-3 bg-background text-text-primary rounded-full border border-[#5050FF] hover:border-[#7070FF] transition-all"
             >
               SIGN UP
             </Button>
+            </Link>
           </section>
         </div>
       </div>

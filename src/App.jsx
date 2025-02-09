@@ -6,11 +6,13 @@ import Coin from "./pages/Coin";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 import News from "./pages/News";
+import Welcome from "./pages/Welcome";
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
+        <Route path="/" element={<Welcome />} />
         <Route path="/home" element={<Home />} />
         <Route path="/signin" element={<SignIn />} />
         <Route path="/signup" element={<SignUp />} />

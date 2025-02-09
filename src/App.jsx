@@ -7,6 +7,9 @@ import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 import News from "./pages/News";
 import Welcome from "./pages/Welcome";
+import HeaderWelcome from "./components/custom/HeaderWelcome";
+import Header from "./components/custom/Header";
+import Footer from "./components/custom/Footer";
 
 function App() {
   return (

@@ -38,27 +38,29 @@ export default function HeaderWelcome() {
             </g>
           </svg>
           <nav className="flex items-center space-x-4">
-            <Button href="#" className="hover:text-primary">
-              HOME
-            </Button>
+            <Link to="/home">
+              <Button href="#" className="hover:text-primary">
+                HOME
+              </Button>
+            </Link>
             <Link to="/contact">
-            <Button href="#" className="hover:text-primary">
-              CONTACT
-            </Button>
+              <Button href="#" className="hover:text-primary">
+                CONTACT
+              </Button>
             </Link>
           </nav>
         </div>
         <div className="flex items-center space-x-4">
           <Link to="/signin">
-          <Button className="hover:text-primary transition">
-            <IoFingerPrintOutline/>
-            LOGIN
-          </Button>
+            <Button className="hover:text-primary transition">
+              <IoFingerPrintOutline />
+              LOGIN
+            </Button>
           </Link>
           <Link to="/signup">
-          <Button className="bg-[#1F5AB0] hover:bg-primary text-white rounded-full px-4 py-2">
-            SIGN UP
-          </Button>
+            <Button className="bg-[#1F5AB0] hover:bg-primary text-white rounded-full px-4 py-2">
+              SIGN UP
+            </Button>
           </Link>
         </div>
       </div>

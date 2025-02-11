@@ -47,7 +47,7 @@ export default function MarketCapWidget() {
   ];
 
   return (
-    <Card className="w-full h-full min-h-[250px] bg-card text-text-primary shadow-lg p-6 rounded-lg">
+    <Card className="w-full h-full min-h-[250px] bg-card text-text-primary shadow-lg p-6 rounded-lg border-none">
       <CardHeader>
         <h2 className="text-lg font-semibold mb-4">Currencies by Market Cap</h2>
       </CardHeader>

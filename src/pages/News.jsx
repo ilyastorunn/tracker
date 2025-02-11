@@ -1,3 +1,5 @@
+import Header from "../components/custom/Header";
+
 export default function News() {
   const newsItem = [
     {
@@ -31,35 +33,40 @@ export default function News() {
   ];
 
   return (
-    <div className="min-h-screen bg-background text-text-primary flex flex-col items-center py-8">
-      <div className="max-w-[1200px] w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6 p-4">
-        {newsItem.map((item, index) => (
-          <div
-            key={index}
-            className="bg-card rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow"
-          >
-            <img
-              src={item.image}
-              alt={item.title}
-              className="w-full h-48 object-cover"
-            />
-            <div className="p-4">
-              <h2 className="text-lg font-semibold mb-2">{item.title}</h2>
-              <p className="text-sm text-text-secondary">{item.description}</p>
+    <>
+      <Header />
+      <div className="min-h-screen bg-background text-text-primary flex flex-col items-center py-8">
+        <div className="max-w-[1200px] w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6 p-4">
+          {newsItem.map((item, index) => (
+            <div
+              key={index}
+              className="bg-card rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow"
+            >
+              <img
+                src={item.image}
+                alt={item.title}
+                className="w-full h-48 object-cover"
+              />
+              <div className="p-4">
+                <h2 className="text-lg font-semibold mb-2">{item.title}</h2>
+                <p className="text-sm text-text-secondary">
+                  {item.description}
+                </p>
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
+        <div className="mt-8 flex items-center justify-center space-x-2">
+          {[1, 2, 3, 4, 5].map((page) => (
+            <button
+              key={page}
+              className="px-3 py-2 bg-card text-text-primary rounded hover:bg-muted/80"
+            >
+              {page}
+            </button>
+          ))}
+        </div>
       </div>
-      <div className="mt-8 flex items-center justify-center space-x-2">
-        {[1, 2, 3, 4, 5].map((page) => (
-          <button
-            key={page}
-            className="px-3 py-2 bg-card text-text-primary rounded hover:bg-muted/80"
-          >
-            {page}
-          </button>
-        ))}
-      </div>
-    </div>
+    </>
   );
 }

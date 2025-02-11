@@ -3,17 +3,20 @@ import { Button } from "@/components/ui/button";
 import { FcGoogle } from "react-icons/fc";
 import { FiArrowRight } from "react-icons/fi";
 import { IoClose } from "react-icons/io5";
+import { Link } from "react-router";
 
 export default function SignIn() {
   return (
     <div className="relative flex flex-col items-center justify-center min-h-screen bg-background text-text-primary">
-      <Button
-        variant="ghost"
-        size="icon"
-        className="absolute top-4 left-4 bg-muted hover:bg-muted/80 rounded-full p-2"
-      >
-        <IoClose className="text-text-primary text-xl" />
-      </Button>
+      <Link to="/">
+        <Button
+          variant="ghost"
+          size="icon"
+          className="absolute top-4 left-4 bg-muted hover:bg-muted/80 rounded-full p-2"
+        >
+          <IoClose className="text-text-primary text-xl" />
+        </Button>
+      </Link>
       <h1 className="text-3xl mb-8 bg-gradient-to-r from-text-secondary to-border text-transparent bg-clip-text">
         Login To Tracker
       </h1>
@@ -60,9 +63,11 @@ export default function SignIn() {
       </div>
       <div className="absolute bottom-4 text-sm text-text-secondary text-center">
         Don't have an account yet?{" "}
-        <a href="" className="text-text-primary hover:underline">
-          Sign up.
-        </a>
+        <Link to="/signup">
+          <a href="" className="text-text-primary hover:underline">
+            Sign up.
+          </a>
+        </Link>
       </div>
     </div>
   );

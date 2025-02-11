@@ -5,7 +5,7 @@ import { CiLocationArrow1 } from "react-icons/ci";
 
 export default function NewsWidget() {
   return (
-    <Card className="w-full h-full min-h-[250px] bg-card p-4 shadow flex flex-col justify-between">
+    <Card className="w-full h-full min-h-[250px] bg-card p-4 shadow flex flex-col justify-between border-none">
       <CardHeader className="flex-row items-start -space-y-1 gap-2 p-0 pb-4">
         <span className="text-lg font-semibold text-text-primary">Check out news</span>
         <Button variant="ghost" size="icon" className="text-text-secondary hover:text-text-primary">

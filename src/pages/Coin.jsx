@@ -8,8 +8,6 @@ import {
   Tooltip,
   Legend,
 } from "chart.js";
-import gptlogo from "../assets/ChatGPT-Logo.png";
-import { Separator } from "@/components/ui/separator";
 
 ChartJS.register(
   LineElement,
@@ -19,6 +17,9 @@ ChartJS.register(
   Tooltip,
   Legend
 );
+import { AiOutlineOpenAI } from "react-icons/ai";
+import { IoMdSend } from "react-icons/io";
+import Header from "../components/custom/Header";
 
 export default function Coin() {
   const data = {
@@ -28,9 +29,9 @@ export default function Coin() {
         label: "Price (USD)",
         data: [30000, 31000, 32000, 30000, 29000, 28000],
         fill: false,
-        borderColor: "#E5E5E5",
+        borderColor: "rgb(99, 102, 241)",
         tension: 0.4,
-        pointBackgroundColor: "#E5E5E5",
+        pointBackgroundColor: "rgb(99, 102, 241)",
       },
     ],
   };
@@ -41,29 +42,31 @@ export default function Coin() {
       legend: { display: false },
       tooltip: {
         enabled: true,
-        backgroundColor: "rgb(var(--muted))",
-        titleColor: "rgb(var(--text-primary))",
-        bodyColor: "rgb(var(--text-secondary))",
+        backgroundColor: "#1F2937",
+        titleColor: "#FFFFFF",
+        bodyColor: "#D1D5DB",
         cornerRadius: 6,
       },
     },
     scales: {
       x: {
-        ticks: { color: "rgb(var(--text-secondary))" },
+        ticks: { color: "#D1D5DB" },
         grid: { display: false },
       },
       y: {
-        ticks: { color: "rgb(var(--text-secondary))" },
-        grid: { color: "rgb(var(--border))" },
+        ticks: { color: "#D1D5DB" },
+        grid: { color: "#374151" },
       },
     },
   };
 
   return (
-    <div className="bg-background min-h-screen py-10">
+    <>
+    <Header />
+    <div className="min-h-screen bg-background text-text-primary py-10">
       <div className="max-w-[1200px] mx-auto px-4">
-        {/* Coin Chart Section */}
-        <div className="bg-card p-6 rounded-lg shadow-lg">
+        {/* Coin Chart */}
+        <div className="bg-card p-6 rounded-lg shadow-lg mb-6">
           <div className="flex items-center justify-between mb-6">
             <div className="flex items-center gap-4">
               <img
@@ -84,26 +87,72 @@ export default function Coin() {
           </div>
         </div>
 
-        <Separator className="my-6 bg-border" />
+        {/* OHLC & Converter Widget'ları */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          {/* OHLC Prices */}
+          <div className="bg-card p-6 rounded-lg shadow-lg">
+            <h3 className="text-lg font-semibold text-text-primary mb-4">
+              OHLC Prices (24H)
+            </h3>
+            <ul className="text-text-secondary space-y-2">
+              <li>
+                <span className="font-semibold text-text-primary">Open:</span>{" "}
+                $71,077
+              </li>
+              <li>
+                <span className="font-semibold text-text-primary">High:</span>{" "}
+                $71,768
+              </li>
+              <li>
+                <span className="font-semibold text-text-primary">Close:</span>{" "}
+                $70,959
+              </li>
+              <li>
+                <span className="font-semibold text-text-primary">Low:</span>{" "}
+                $70,398
+              </li>
+            </ul>
+          </div>
 
-        {/* ChatGPT Sekmesi */}
-        <div className="bg-card p-6 rounded-lg shadow-lg">
+          {/* Converter */}
+          <div className="bg-card p-6 rounded-lg shadow-lg">
+            <h3 className="text-lg font-semibold text-text-primary mb-4">
+              Converter
+            </h3>
+            <div className="space-y-4">
+              <div className="flex items-center gap-4">
+                <input
+                  type="number"
+                  placeholder="1"
+                  className="w-full p-2 rounded-lg bg-input text-text-primary focus:outline-none"
+                />
+                <select className="p-2 rounded-lg bg-input text-text-primary focus:outline-none">
+                  <option>BTC</option>
+                  <option>ETH</option>
+                </select>
+              </div>
+              <div className="flex items-center gap-4">
+                <input
+                  type="number"
+                  placeholder="70948.16"
+                  className="w-full p-2 rounded-lg bg-input text-text-primary focus:outline-none"
+                />
+                <select className="p-2 rounded-lg bg-input text-text-primary focus:outline-none">
+                  <option>USD</option>
+                  <option>EUR</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* ChatGPT Widget */}
+        <div className="bg-card p-6 rounded-lg shadow-lg mt-6">
           <div className="flex justify-between items-center mb-6">
             <h3 className="text-lg font-semibold text-text-primary">
               Ask GPT-4o!
             </h3>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="32"
-              height="32"
-              viewBox="0 0 32 32"
-              className="text-text-primary"
-            >
-              <path
-                d="M29.71,13.09A8.09,8.09,0,0,0,20.34,2.68a8.08,8.08,0,0,0-13.7,2.9A8.08,8.08,0,0,0,2.3,18.9,8,8,0,0,0,3,25.45a8.08,8.08,0,0,0,8.69,3.87,8,8,0,0,0,6,2.68,8.09,8.09,0,0,0,7.7-5.61,8,8,0,0,0,5.33-3.86A8.09,8.09,0,0,0,29.71,13.09Zm-12,16.82a6,6,0,0,1-3.84-1.39l.19-.11,6.37-3.68a1,1,0,0,0,.53-.91v-9l2.69,1.56a.08.08,0,0,1,.05.07v7.44A6,6,0,0,1,17.68,29.91ZM4.8,24.41a6,6,0,0,1-.71-4l.19.11,6.37,3.68a1,1,0,0,0,1,0l7.79-4.49V22.8a.09.09,0,0,1-.05.07L13,26.55A6,6,0,0,1,4.8,24.41ZM3.12,10.53A6,6,0,0,1,6.28,7.9v7.57a1,1,0,0,0,.51.9l7.75,4.47L11.85,22.4a.14.14,0,0,1-.09,0L5.32,18.68a6,6,0,0,1-2.2-8.18Zm22.13,5.14-7.78-4.47L20.16,9.64a.08.08,0,0,1,.09,0l6.44,3.72a6,6,0,0,1-.9,10.81V16.56A1.06,1.06,0,0,0,25.25,15.67Zm2.68-4-.19-.12-6.36-3.7a1,1,0,0,0-1.05,0l-7.78,4.49V9.2a.09.09,0,0,1,.05-.07L19,5.4a6,6,0,0,1,8.91,6.21ZM11.08,17.15,8.38,15.6a.14.14,0,0,1-.05-.07V8.1a6,6,0,0,1,9.84-4.61L18,3.6,11.61,7.28a1,1,0,0,0-.53.91ZM12.54,14,16,12l3.47,2v4L16,20l-3.47-2Z"
-                fill="currentColor"
-              />
-            </svg>
+            <AiOutlineOpenAI className="w-6 h-6 text-text-primary" />
           </div>
           <ul className="text-text-secondary space-y-4 mb-8">
             <li className="cursor-pointer hover:text-text-primary">
@@ -116,48 +165,44 @@ export default function Coin() {
               ➤ What are predictions for Ripple this week?
             </li>
           </ul>
-          <div className="relative">
+          <div className="relative pt-[60px]">
             <input
               type="text"
               placeholder="Ask something..."
               className="w-full p-4 rounded-full bg-input text-text-primary focus:outline-none"
             />
-            <button className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-muted p-2 rounded-full hover:bg-muted/80">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth={2}
-                stroke="currentColor"
-                className="w-5 h-5 text-text-primary"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M14.25 4.75l-4.5 7.5h9l-4.5 7.5"
-                />
-              </svg>
+            <button className="absolute right-4 top-[75%] transform -translate-y-[50%] bg-muted p-2 rounded-full hover:bg-muted/80">
+              <IoMdSend className="w-4 h-4 text-text-primary" />
             </button>
           </div>
         </div>
 
-        <Separator className="my-6 bg-border" />
-
-        {/* Coin Info Section */}
-        <div className="bg-card p-6 rounded-lg shadow-lg">
+        {/* Coin Info */}
+        <div className="bg-card p-6 rounded-lg shadow-lg mt-6">
           <h3 className="text-lg font-semibold text-text-primary mb-4">
             About Bitcoin (BTC)
           </h3>
           <p className="text-text-secondary leading-relaxed">
             Bitcoin is a decentralized digital currency that operates without a
-            central bank or single administrator.
+            central bank or single administrator. It was created in 2009 by an
+            unknown person or group of people using the pseudonym Satoshi
+            Nakamoto. Transactions are verified by network nodes through
+            cryptography and recorded in a public distributed ledger called a
+            blockchain. Bitcoin has been hailed as a revolutionary innovation in
+            the financial world, providing a secure and efficient way to
+            transfer value globally.
           </p>
           <p className="text-text-secondary mt-4 leading-relaxed">
             Bitcoin is widely regarded as the first cryptocurrency, and its
-            introduction ushered in a new era of decentralized finance.
+            introduction ushered in a new era of decentralized finance. It is
+            capped at 21 million coins, which ensures scarcity and helps
+            maintain its value over time. As the world's most popular
+            cryptocurrency, Bitcoin continues to attract attention from
+            investors, institutions, and governments worldwide.
           </p>
         </div>
       </div>
     </div>
+    </>
   );
 }

@@ -1,11 +1,14 @@
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
+import Header from "../components/custom/Header";
 
 export default function Contact() {
   return (
+    <>
+    <Header />
     <div className="min-h-screen bg-background text-text-primary flex items-center justify-center">
-      <div className="max-w-[1200px] mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div className="max-w-[1200px] w-full px-4 grid grid-cols-1 md:grid-cols-2 gap-8">
         <div>
           <h1 className="text-3xl font-bold mb-4">Need help?</h1>
           <h2 className="text-2xl font-semibold mb-6">Get in touch.</h2>
@@ -16,9 +19,9 @@ export default function Contact() {
             simply need more information about our services, we’re here to help.
           </p>
         </div>
-        <div className="bg-card p-6 rounded-lg shadow-lg">
-          <form className="space-y-4">
-            <div className="grid grid-cols-2 gap-4">
+        <div className="bg-card max-w-[700px] p-6 rounded-lg shadow-lg">
+          <form className="space-y-6">
+            <div className="grid grid-cols-2 gap-6">
               <div>
                 <label className="block text-sm font-medium text-text-secondary mb-1">
                   First Name
@@ -79,5 +82,6 @@ export default function Contact() {
         </div>
       </div>
     </div>
+    </>
   );
 }

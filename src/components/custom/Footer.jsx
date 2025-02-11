@@ -6,7 +6,7 @@ export default function Footer() {
   return (
     <footer className="bg-background text-text-secondary py-2">
       <div className="max-w-[1200px] mx-auto flex items-center justify-between px-4">
-        <a href="https://ilyas-dev.vercel.app/" target="_blank">
+        <a href="https://ilyas-dev.vercel.app/" target="_blank" className="hover:text-underline">
         <Button className="text-sm pl-0">Made by ilyas torun</Button>
         </a>
         <div className="flex space-x-4">

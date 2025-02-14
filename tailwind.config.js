@@ -5,7 +5,7 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
+        'gpt-gradient': 'radial-gradient(circle, rgba(255,255,255,0.15) 30%, rgba(18,18,18,1) 100%)',
       },
       borderRadius: {
         lg: "12px",

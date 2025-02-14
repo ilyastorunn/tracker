@@ -3,6 +3,7 @@ import MarketCapWidget from "../components/custom/MarketCapWidget";
 import NewsWidget from "../components/custom/NewsWidget";
 import TrendingWidget from "../components/custom/TrendingWidget";
 import Header from "../components/custom/Header";
+import Footer from "../components/custom/Footer";
 
 export default function Home() {
   return (
@@ -22,6 +23,7 @@ export default function Home() {
           </div>
         </div>
       </div>
+      <Footer />
     </>
   );
 }

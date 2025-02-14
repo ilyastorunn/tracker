@@ -7,6 +7,7 @@ import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 import News from "./pages/News";
 import Welcome from "./pages/Welcome";
+import Analyst from "./pages/Analyst";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/notfound" element={<NotFound />} />
         <Route path="/news" element={<News />} />
+        <Route path="/analyst" element={<Analyst />} />
       </Routes>
     </BrowserRouter>
   );

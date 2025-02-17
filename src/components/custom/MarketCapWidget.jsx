@@ -47,38 +47,55 @@ export default function MarketCapWidget() {
   ];
 
   return (
-    <Card className="w-full h-full min-h-[250px] bg-card text-text-primary shadow-lg p-6 rounded-lg border-none">
-      <CardHeader>
-        <h2 className="text-lg font-semibold mb-4">Currencies by Market Cap</h2>
-      </CardHeader>
-      <CardContent>
-        <div className="grid gap-4">
-          {trendingItems.map((item, index) => (
-            <div
-              key={index}
-              className="grid grid-cols-6 items-center gap-4 px-4"
-            >
-              <div className="col-span-2 flex items-center gap-2">
-                <img className="w-4 h-4" src={item.logo} alt={item.name} />
-                <div className="flex flex-col">
-                  <div className="text-sm font-medium">{item.name}</div>
-                  <div className="text-xs text-text-secondary">{item.symbol}</div>
+    <div className="w-full">
+      <h2 className="text-lg font-semibold text-text-primary mb-2">
+        Prices by Market Cap
+      </h2>
+      <Card className="w-full h-full min-h-[250px] bg-card text-text-primary shadow-lg p-6 rounded-lg border-none">
+        <CardContent>
+          <div className="grid grid-cols-6 items-center gap-4 px-4 pb-1 text-muted-foreground text-sm font-medium">
+            <div className="col-span-2">Name</div>
+            <div className="col-span-1">Price</div>
+            <div className="col-span-1">7d</div>
+            <div className="col-span-1">Volume</div>
+            <div className="col-span-1">Market Cap</div>
+          </div>
+          <div className="grid gap-4 pt-4">
+            {trendingItems.map((item, index) => (
+              <div
+                key={index}
+                className="grid grid-cols-6 items-center gap-4 px-4"
+              >
+                <div className="col-span-2 flex items-center gap-2">
+                  <img className="w-4 h-4" src={item.logo} alt={item.name} />
+                  <div className="flex flex-col">
+                    <div className="text-sm font-medium">{item.name}</div>
+                    <div className="text-xs text-text-secondary">
+                      {item.symbol}
+                    </div>
+                  </div>
+                </div>
+                <div className="col-span-1 text-sm font-medium">
+                  {item.price}
+                </div>
+                <div
+                  className={`col-span-1 text-xs font-medium ${
+                    item.positive ? "text-green-500" : "text-red-500"
+                  }`}
+                >
+                  {item.change}
+                </div>
+                <div className="col-span-1 text-sm font-medium">
+                  {item.volume}
+                </div>
+                <div className="col-span-1 text-sm font-medium">
+                  {item.marketCap}
                 </div>
               </div>
-              <div className="col-span-1 text-sm font-medium">{item.price}</div>
-              <div
-                className={`col-span-1 text-xs font-medium ${
-                  item.positive ? "text-green-500" : "text-red-500"
-                }`}
-              >
-                {item.change}
-              </div>
-              <div className="col-span-1 text-sm font-medium">{item.volume}</div>
-              <div className="col-span-1 text-sm font-medium">{item.marketCap}</div>
-            </div>
-          ))}
-        </div>
-      </CardContent>
-    </Card>
+            ))}
+          </div>
+        </CardContent>
+      </Card>
+    </div>
   );
 }

@@ -7,24 +7,27 @@ export default function Header() {
   return (
     <header className="bg-background text-text-primary w-full">
       <div className="max-w-[1200px] mx-auto flex items-center justify-between py-4 px-4">
-        <Link to="/">
         <FaViacoin className="w-6 h-6" />
-        </Link>
+
         <nav className="flex space-x-6">
-          <Button href="" className="hover:text-primary transition">
-            Cryptocurrencies
-          </Button>
+          <Link to="/home">
+            <Button href="" className="hover:text-primary transition">
+              Home
+            </Button>
+          </Link>
           <Button href="" className="hover:text-primary transition">
             Search
           </Button>
           <Link to="/news">
-          <Button href="" className="hover:text-primary transition">
-            Read
-          </Button>
+            <Button href="" className="hover:text-primary transition">
+              Read
+            </Button>
           </Link>
-          <Button href="" className="hover:text-primary transition">
-            Analyst
-          </Button>
+          <Link to="/analyst">
+            <Button href="" className="hover:text-primary transition">
+              Analyst
+            </Button>
+          </Link>
           <Button href="" className="hover:text-primary transition">
             Favorites
           </Button>

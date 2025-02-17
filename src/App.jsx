@@ -8,6 +8,7 @@ import NotFound from "./pages/NotFound";
 import News from "./pages/News";
 import Welcome from "./pages/Welcome";
 import Analyst from "./pages/Analyst";
+import Profile from "./pages/Profile";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Route path="/notfound" element={<NotFound />} />
         <Route path="/news" element={<News />} />
         <Route path="/analyst" element={<Analyst />} />
+        <Route path="/profile" element={<Profile />} />
       </Routes>
     </BrowserRouter>
   );

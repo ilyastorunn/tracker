@@ -1,9 +1,9 @@
 import { Separator } from "@/components/ui/separator";
 import MarketCapWidget from "../components/custom/MarketCapWidget";
 import NewsWidget from "../components/custom/NewsWidget";
+import { Button } from "@/components/ui/button";
 import TrendingWidget from "../components/custom/TrendingWidget";
 import Header from "../components/custom/Header";
-import Footer from "../components/custom/Footer";
 
 export default function Home() {
   return (
@@ -20,6 +20,11 @@ export default function Home() {
           {/* <Separator className="col-span-3 bg-border" /> */}
           <div className="col-span-3">
             <MarketCapWidget />
+          </div>
+          <div className="col-span-4 flex items-center justify-center mt-6">
+            <Button className="w-36 h-12 rounded-full bg-transparent text-text-primary border-2 border-border hover:bg-muted/80">
+              Explore More!
+            </Button>
           </div>
         </div>
       </div>

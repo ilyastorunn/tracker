@@ -28,7 +28,7 @@ export default function Analyst() {
           </p>
         </div>
         <div className="w-full max-w-4xl bg-card p-8 rounded-lg shadow-lg relative overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-gray-600/10 to-transparent rounded-lg blur-3xl opacity-30" />
+          <div className="absolute inset-0 bg-gpt-gradient rounded-lg blur-3xl opacity-30" />
           <div className="mb-8 space-y-4">
             {exampleQuestions.map((q, index) => (
               <p
@@ -48,9 +48,9 @@ export default function Analyst() {
                 placeholder="Ask about Bitcoin, Ethereum, or market trends..."
                 value={question}
                 onChange={(e) => setQuestion(e.target.value)}
-                className="w-full p-4 pr-14 bg-input text-text-primary focus:outline-none rounded-full mx-auto"
+                className="w-full py-6 px-4 pr-20 bg-background text-text-primary focus:outline-none rounded-full mx-auto"
               />
-              <Button className="absolute right-0 top-[50%] transform -translate-y-[50%] bg-muted hover:bg-muted/80 p-3 rounded-full">
+              <Button className="absolute right-1 top-[50%] transform -translate-y-[50%] bg-muted hover:bg-muted/80 p-3 rounded-full">
                 <IoMdSend className="w-4 h-4 text-text-primary" />
               </Button>
             </div>

@@ -10,13 +10,13 @@ export default function Welcome() {
       <HeaderWelcome />
       <div className="bg-background text-text-primary min-h-screen flex flex-col items-center space-y-16 px-4 py-12">
         <div className="text-center pb-24 pt-10">
-          <h1 className="text-4xl font-bold mb-4">
+          <h1 className="text-4xl font-bold mb-8 bg-gradient-to-r from-text-secondary to-border text-transparent bg-clip-text">
             Track Your Currencies Easily.
           </h1>
           <Link to="/signup">
             <Button
               variant="default"
-              className="px-6 py-3 bg-background text-text-primary rounded-full border border-[#5050FF] hover:border-[#7070FF] transition-all"
+              className="px-6 py-4 rounded-full bg-transparent text-text-primary border-2 border-border hover:bg-muted/80"
             >
               SIGN UP FOR FREE!
             </Button>
@@ -76,17 +76,17 @@ export default function Welcome() {
             </h2>
             <p className="text-text-secondary mb-5">Try it now</p>
             <Link to="/signup">
-            <Button
-              variant="default"
-              className="px-6 py-3 bg-background text-text-primary rounded-full border border-[#5050FF] hover:border-[#7070FF] transition-all"
-            >
-              SIGN UP
-            </Button>
+              <Button
+                variant="default"
+                className="px-6 py-4 rounded-full bg-transparent text-text-primary border-2 border-border hover:bg-muted/80"
+              >
+                SIGN UP
+              </Button>
             </Link>
           </section>
         </div>
       </div>
-      <Footer />
+      <Footer className="mt-5" />
     </>
   );
 }

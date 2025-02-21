@@ -52,7 +52,7 @@ export default function SignIn() {
       </div>
       <div className="mt-6">
         <Button className="w-36 h-12 rounded-full bg-transparent text-text-primary border-2 border-border hover:bg-muted/80">
-          Sign Up
+          Sign In
         </Button>
       </div>
       <div className="flex items-center justify-center mt-6">

@@ -60,7 +60,7 @@ export default function SignUp() {
         </div>
       </div>
       <div className="mt-6">
-        <Button className="w-36 h-12 rounded-full bg-muted text-text-primary hover:bg-muted/80 border-2 border-border">
+      <Button className="w-36 h-12 rounded-full bg-transparent text-text-primary border-2 border-border hover:bg-muted/80">
           Sign Up
         </Button>
       </div>

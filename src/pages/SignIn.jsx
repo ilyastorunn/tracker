@@ -17,7 +17,7 @@ export default function SignIn() {
           <IoClose className="text-text-primary text-xl" />
         </Button>
       </Link>
-      <h1 className="text-3xl mb-8 bg-gradient-to-r from-text-secondary to-border text-transparent bg-clip-text">
+      <h1 className="text-3xl mb-8 font-playfair bg-gradient-to-r from-text-secondary to-border text-transparent bg-clip-text">
         Login To Tracker
       </h1>
       <div className="space-y-4 w-[85%] max-w-lg">
@@ -25,7 +25,7 @@ export default function SignIn() {
           <Input
             type="email"
             placeholder="account email"
-            className="w-full h-12 text-text-primary bg-input rounded-full px-4 border-0"
+            className="w-full h-12 text-text-primary font-inter bg-input rounded-full px-4 border-0"
           />
           <Button
             variant="ghost"
@@ -39,7 +39,7 @@ export default function SignIn() {
           <Input
             type="password"
             placeholder="password"
-            className="w-full h-12 text-text-primary bg-input rounded-full px-4 border-0"
+            className="w-full h-12 text-text-primary font-inter bg-input rounded-full px-4 border-0"
           />
           <Button
             variant="ghost"
@@ -51,20 +51,20 @@ export default function SignIn() {
         </div>
       </div>
       <div className="mt-6">
-        <Button className="w-36 h-12 rounded-full bg-transparent text-text-primary border-2 border-border hover:bg-muted/80">
+        <Button className="w-36 h-12 rounded-full bg-transparent font-inter text-text-primary border-2 border-border hover:bg-muted/80">
           Sign In
         </Button>
       </div>
       <div className="flex items-center justify-center mt-6">
         <FcGoogle className="text-2xl mr-2" />
-        <span className="text-sm font-medium text-text-primary hover:underline">
+        <span className="text-sm font-medium font-inter text-text-primary hover:underline">
           Sign in with Google
         </span>
       </div>
-      <div className="absolute bottom-4 text-sm text-text-secondary text-center">
+      <div className="absolute bottom-4 text-sm font-inter text-text-secondary text-center">
         Don't have an account yet?{" "}
         <Link to="/signup">
-          <a href="" className="text-text-primary hover:underline">
+          <a href="" className="text-text-primary font-inter hover:underline">
             Sign up.
           </a>
         </Link>

@@ -46,6 +46,10 @@ module.exports = {
         input: "#252525",
         ring: "#444444",
       },
+      fontFamily: {
+        inter: ["Inter", "sans-serif"], // Body text
+        playfair: ["Playfair Display", "serif"], // Başlıklar
+      }
     },
   },
   plugins: [require("tailwindcss-animate")],

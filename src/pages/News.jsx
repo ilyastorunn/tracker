@@ -48,8 +48,8 @@ export default function News() {
                 className="w-full h-48 object-cover"
               />
               <div className="p-4">
-                <h2 className="text-lg font-semibold mb-2">{item.title}</h2>
-                <p className="text-sm text-text-secondary">
+                <h2 className="text-lg font-inter font-semibold mb-2">{item.title}</h2>
+                <p className="text-sm font-inter text-text-secondary">
                   {item.description}
                 </p>
               </div>

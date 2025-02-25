@@ -1,3 +1,12 @@
+import { Input } from "@/components/ui/input";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+
 export default function Converter() {
   return (
     <div className="bg-card p-6 rounded-lg shadow-lg">
@@ -6,22 +15,28 @@ export default function Converter() {
       </h3>
       <div className="space-y-4">
         <div className="flex items-center gap-4">
-          <input
-            type="number"
-            placeholder="1"
-            className="w-full p-2 rounded-lg bg-input text-text-primary focus:outline-none"
-          />
-          <select className="p-2 rounded-lg bg-input text-text-primary focus:outline-none">
-            <option>BTC</option>
-            <option>ETH</option>
-          </select>
+          <Input type="number" placeholder="1" className="w-full [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none" />
+          <Select>
+            <SelectTrigger className="w-[120px]">
+              <SelectValue placeholder="BTC" />
+            </SelectTrigger>
+            <SelectContent>
+              <SelectItem value="BTC">BTC</SelectItem>
+              <SelectItem value="ETH">ETH</SelectItem>
+            </SelectContent>
+          </Select>
         </div>
         <div className="flex items-center gap-4">
-          <input className="flex items-center gap-4" />
-          <select className="p-2 rounded-lg text-text-primary focus:outline-none">
-            <option>USD</option>
-            <option>EUR</option>
-          </select>
+          <Input type="number" placeholder="1" className="w-full [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none" />
+          <Select>
+            <SelectTrigger className="w-[120px]">
+              <SelectValue placeholder="USD" />
+            </SelectTrigger>
+            <SelectContent>
+              <SelectItem value="USD">USD</SelectItem>
+              <SelectItem value="EUR">EUR</SelectItem>
+            </SelectContent>
+          </Select>
         </div>
       </div>
     </div>

@@ -9,11 +9,11 @@ import { FaBitcoin } from "react-icons/fa6";
 
 const chartData = [
   { date: "Jan", price: 30000 },
-  { date: "Feb", price: 31000 },
-  { date: "Mar", price: 32000 },
-  { date: "Apr", price: 30000 },
-  { date: "May", price: 29000 },
-  { date: "Jun", price: 28000 },
+  { date: "Feb", price: 13000 },
+  { date: "Mar", price: 42000 },
+  { date: "Apr", price: 5000 },
+  { date: "May", price: 39000 },
+  { date: "Jun", price: 21000 },
 ];
 
 const chartConfig = {
@@ -25,7 +25,7 @@ const chartConfig = {
 
 export default function Chart() {
   return (
-    <Card className="bg-card p-6 rounded-lg shadow-lg mb-6 w-full max-w-[1200px] mx-auto">
+    <Card className="bg-card p-6 rounded-lg border-none mb-6 w-full max-w-[1200px] mx-auto">
       <CardHeader className="flex items-start justify-between mb-4 ml-5">
         <div className="flex items-center gap-4">
           <FaBitcoin className="w-10 h-10 text-yellow-400" />
@@ -65,9 +65,9 @@ export default function Chart() {
             <Area
               dataKey="price"
               type="monotone"
-              fill="hsl(var(--chart-1))"
+              fill="#3b82f6"
               fillOpacity={0.4}
-              stroke="hsl(var(--chart-1))"
+              stroke="#3b82f6"
               strokeWidth={2}
             />
           </AreaChart>

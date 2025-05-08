@@ -1,6 +1,6 @@
 import Chart from "../components/custom/Chart";
 import Converter from "../components/custom/Converter";
-import Gpt from "../components/custom/Gpt";
+import AiAssistant from "../components/custom/AiAssistant";
 import Header from "../components/custom/Header";
 import Info from "../components/custom/Info";
 import OHLC from "../components/custom/OHLC";
@@ -17,7 +17,7 @@ export default function Coin() {
             <OHLC />
             <Converter />
           </div>
-          <Gpt />
+          <AiAssistant />
           <Info />
         </div>
       </div>

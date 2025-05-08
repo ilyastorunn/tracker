@@ -1,7 +1,7 @@
 import { AiOutlineOpenAI } from "react-icons/ai";
 import { IoMdSend } from "react-icons/io";
 
-export default function Gpt() {
+export default function AiAssistant() {
   return (
     <div className="bg-gpt-gradient p-6 rounded-lg shadow-lg mt-6">
       <div className="flex justify-between items-center mb-6">
@@ -10,13 +10,13 @@ export default function Gpt() {
       </div>
       <ul className="text-text-primary space-y-4 mb-8">
         <li className="cursor-pointer hover:text-text-primary">
-          ➤ What's the latest news on Ethereum?
+          ➤ What&apos;s the latest news on Ethereum?
         </li>
         <li className="cursor-pointer hover:text-text-primary">
-          ➤ What's the latest news on Ethereum?
+          ➤ What&apos;s the latest news on Ethereum?
         </li>
         <li className="cursor-pointer hover:text-text-primary">
-          ➤ What's the latest news on Ethereum?
+          ➤ What&apos;s the latest news on Ethereum?
         </li>
       </ul>
       <div className="relative pt-[60px]">

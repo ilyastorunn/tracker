@@ -10,24 +10,41 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Label } from "@/components/ui/label";
-/* import { useState } from "react"; */
+// import { useState } from "react";
 import { FaGoogle } from "react-icons/fa";
+import SignUpBtn from "../components/custom/signUpBtn";
 
-export default function SignIn() {
-  /* const [email, setEmail] = useState("");
-  const [password, setPassword] = useState(""); */
+export default function SignUp() {
+  //   const [email, setEmail] = useState("");
+  //   const [password, setPassword] = useState("");
 
   return (
     <div className="min-h-screen bg-[#0d0d0d] flex items-center justify-center">
       <Card className="w-full max-w-sm bg-[#0d0d0d] border-none">
         <CardHeader className="pb-[30px]">
           <CardTitle className="flex items-center justify-center text-[32px] bg-gradient-to-r from-[#4FD1C5] to-[#F7FAFC] bg-clip-text text-transparent p-0">
-            Login to Tracker
+            Sign Up to Tracker
           </CardTitle>
         </CardHeader>
         <CardContent className="flex items-center justify-center">
           <form>
             <div className="flex flex-col gap-[24px]">
+              <div className="flex flex-row gap-[1px]">
+                <Input
+                  id="name"
+                  type="text"
+                  placeholder="first name"
+                  required
+                  className="rounded-full bg-[#1A1A1A] w-[140px] h-[38px] text-xs border-[#2F323B]"
+                />
+                <Input
+                  id="surname"
+                  type="text"
+                  placeholder="last name"
+                  required
+                  className="rounded-full bg-[#1A1A1A] w-[140px] h-[38px] text-xs border-[#2F323B]"
+                />
+              </div>
               <div className="grid ">
                 <Input
                   id="email"
@@ -46,23 +63,43 @@ export default function SignIn() {
                   className="rounded-full bg-[#1A1A1A] w-[284px] h-[38px] text-xs border-[#2F323B]"
                 />
               </div>
+              <div className="grid">
+                <Input
+                  id="password"
+                  type="password"
+                  placeholder="retype password"
+                  required
+                  className="rounded-full bg-[#1A1A1A] w-[284px] h-[38px] text-xs border-[#2F323B]"
+                />
+              </div>
             </div>
           </form>
         </CardContent>
-        <CardFooter className="flex items-center justify-center gap-2 pt-4">
+        <CardFooter className="flex flex-col items-center justify-center gap-7 pt-2">
+          <div className="p-[2px] rounded-[16px] bg-gradient-to-r from-[#4FD1C5] to-[#F7FAFC] inline-block">
+            <button
+              type="submit"
+              className="w-[106px] h-[24px] rounded-[14px] bg-[#0b0b10] text-[#F7FAFC] text-xs font-normal font-['Familjen_Grotesk'] flex items-center justify-center focus:outline-none border-none"
+              style={{ letterSpacing: 0 }}
+            >
+              sign up
+            </button>
+          </div>
+          <div className="flex items-center gap-2">
           <FaGoogle className="text-[#F7FAFC]" />
           <span className="text-[#F7FAFC] text-xs">
-            sign in with
+            sign in with{" "}
             <a href="" className="hover:underline text-[#F7FAFC] text-xs">
               Google
             </a>
           </span>
+          </div>
         </CardFooter>
       </Card>
-      <div className="absolute bottom-0 mb-6 text-xs text-white">
-        Don't have account yet?{" "}
-        <a href="#" className="text-[#f7fafc] underline">
-          Sign up.
+      <div className="absolute bottom-0 mb-6 text-xs text-[#A0AEC0]">
+        Have account?{" "}
+        <a href="#" className="text-[#f7fafc] hover:underline">
+          Sign in.
         </a>
       </div>
     </div>

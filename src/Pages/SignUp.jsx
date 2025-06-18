@@ -76,7 +76,7 @@ export default function SignUp() {
           </form>
         </CardContent>
         <CardFooter className="flex flex-col items-center justify-center gap-7 pt-2">
-          <div className="p-[2px] rounded-[16px] bg-gradient-to-r from-[#4FD1C5] to-[#F7FAFC] inline-block">
+          {/* <div className="p-[2px] rounded-[16px] bg-gradient-to-r from-[#4FD1C5] to-[#F7FAFC] inline-block">
             <button
               type="submit"
               className="w-[106px] h-[24px] rounded-[14px] bg-[#0b0b10] text-[#F7FAFC] text-xs font-normal font-['Familjen_Grotesk'] flex items-center justify-center focus:outline-none border-none"
@@ -84,7 +84,8 @@ export default function SignUp() {
             >
               sign up
             </button>
-          </div>
+          </div> */}
+          <SignUpBtn />
           <div className="flex items-center gap-2">
           <FaGoogle className="text-[#F7FAFC]" />
           <span className="text-[#F7FAFC] text-xs">
